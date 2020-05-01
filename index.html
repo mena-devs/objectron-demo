@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Try Objectron</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/codemirror.min.css" />
+    <link rel="stylesheet" href="https://codemirror.net/theme/dracula.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/codemirror.min.js"></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-title">Objectron Demo</h1>
+    </header>
+    <div class="wrapper">
+      <aside class="c-input">
+        <section class="area-container">
+          <h2 class="section-title">Payload</h2>
+          <textarea name="" id="payload-input" rows="8" cols="40" class="payload-area"></textarea>
+        </section>
+      </aside>
+      <main class="c-output">
+        <section class="area-container pattern">
+          <h2 class="section-title">Pattern</h2>
+          <textarea name="" id="pattern-input" rows="8" cols="40"></textarea>
+        </section>
+        <section class="area-container">
+          <h2 class="section-title">Ouput</h2>
+          <textarea name="" id="objectron-output" rows="8" cols="40" class="output-area"></textarea>
+        </section>
+      </main>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      CodeMirror.fromTextArea(document.getElementById('pattern-input'), {
+        lineNumbers: true, 
+        mode: "javascript", 
+        theme: "dracula",
+        lineWrapping: false
+      });
+
+      CodeMirror.fromTextArea(document.getElementById('payload-input'), {
+        lineNumbers: true, 
+        mode: "javascript", 
+        theme: "dracula",
+        lineWrapping: false
+      });
+
+      CodeMirror.fromTextArea(document.getElementById('objectron-output'), {
+        lineNumbers: true, 
+        mode: "javascript", 
+        theme: "dracula",
+        lineWrapping: false
+      });
+    </script>
+  </body>
+</html>
