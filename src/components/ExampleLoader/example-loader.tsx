@@ -15,8 +15,8 @@ export default class ExampleLoader extends Component {
     },
     {
       title: 'Match with RegEx and named groups',
-      payload: `{\n  'type': 'message',\n  'text': 'invite (Smith) (john@example.com) (CompanyX) (Engineer)',\n}\n`,
-      pattern: `{\n  'type': 'message',\n  'text': /invite \((?<name>\S+)\) \((?<email>\S+)\) \((?<company>\S+)\) \((?<role>\S+)\)/,\n}\n`
+      payload: "{\n  'type': 'message',\n  'text': 'invite (Smith) (john@example.com) (CompanyX) (Engineer)',\n}\n",
+      pattern: `{'type': 'message',\n'text': /invite \\((?<name>\\S+)\\) \\((?<email>\\S+)\\) \\((?<company>\\S+)\\) \\((?<role>\\S+)\\)/,\n}`
     },
     {
       title: 'Match with closures',
