@@ -11,6 +11,11 @@ npm start
 ```
 npm run build
 ```
+## Deploy build to demo page
+
+```
+git subtree push --prefix dist origin gh-pages 
+```
 
 # Contributions
 
