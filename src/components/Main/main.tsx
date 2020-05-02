@@ -1,5 +1,6 @@
 import { h, Component, createRef } from 'preact';
 import match from '@menadevs/objectron';
+import Header from 'components/Header/header';
 import CodeSection from 'components/CodeSection/code-section';
 import ExampleLoader from 'components/ExampleLoader/example-loader';
 import './main-style.css';
@@ -62,6 +63,7 @@ export default class Main extends Component<{}, MainState>{
   render() {
     return (
       <div class="main-wrapper">
+      <Header />
         <div class="toolbar">
           <ExampleLoader onExampleSelect={this.initCodeContent} />
         </div>

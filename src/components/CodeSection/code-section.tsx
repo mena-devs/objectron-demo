@@ -19,6 +19,7 @@ type CodeSectionState = {
 
 export default class CodeSection extends Component<CodeSectionProps, CodeSectionState> {
   inputRef = createRef();
+  sectionRef = createRef();
   cm = CodeMirror();
 
   constructor() {
@@ -61,6 +62,9 @@ export default class CodeSection extends Component<CodeSectionProps, CodeSection
       readOnly: this.props.readOnly
     });
 
+    let calcHeight = this.sectionRef.current.clientHeight - 40;
+    this.cm.setSize('100%', `${calcHeight}px`);
+
     this.cm.on('change', this.editorValueChanged);
   }
 
@@ -81,7 +85,7 @@ export default class CodeSection extends Component<CodeSectionProps, CodeSection
 
   render() {
     return (
-      <section className={(this.state.codeIsValid) ? 'area-container':'area-container--invalid'}>
+      <section className={(this.state.codeIsValid) ? 'area-container':'area-container--invalid'} ref={this.sectionRef}>
         <h2 className="section-title">{this.props.title}</h2>
         <textarea id="pattern-input" ref={this.inputRef}></textarea>
       </section>

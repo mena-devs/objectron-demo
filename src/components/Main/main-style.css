@@ -35,9 +35,9 @@ body {
 
 .main-wrapper {
   display: grid;
-  grid-template-rows: fit-content(10%) auto;
+  grid-template-rows: fit-content(10%) fit-content(10%) auto;
   flex-grow: 1;
-  height: 95vh;
+  height: 100vh;
 }
 
 .panels-wrapper {
