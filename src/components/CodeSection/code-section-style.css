@@ -1,0 +1,29 @@
+.area-container--invalid {
+  border: 1px red solid;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #cfd0d1;
+  margin-left: 15px;
+}
+
+.CodeMirror {
+  border: 1px #CCC solid;
+  font-size: 18px;
+}
+
+.c-input .area-container {
+  border-bottom: 1px solid #616772;
+  height: 100%;
+}
+
+.c-output .area-container {
+  border-bottom: 1px solid #616772;
+}
+
+.output-area .payload-area {
+  height: 100%;
+}

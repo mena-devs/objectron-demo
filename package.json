@@ -1,0 +1,33 @@
+{
+  "name": "objectron-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --display-error-details --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@menadevs/objectron": "^0.1.4",
+    "codemirror": "^5.53.2",
+    "preact": "^10.4.0",
+    "preact-codemirror": "^1.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "html-webpack-inline-chunk-plugin": "^1.1.1",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^4.2.0",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
