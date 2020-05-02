@@ -65,19 +65,21 @@ export default class Main extends Component<{}, MainState>{
         <div class="toolbar">
           <ExampleLoader onExampleSelect={this.initCodeContent} />
         </div>
-        <div class="panels-wrapper">
-          <aside class="c-input">
-            <CodeSection title="Object" 
-              onChange={this.handlePayloadCodeChange} 
-              content={this.state.initialPayloadContent}/>
-          </aside>
-          <main class="c-output">
-            <CodeSection title="Pattern" 
-              onChange={this.handlePatternCodeChange} 
-              content={this.state.initialPatternContent}/>
+        <div>
+          <div class="panels-wrapper">
+            <aside class="c-input">
+              <CodeSection title="Object" 
+                onChange={this.handlePayloadCodeChange} 
+                content={this.state.initialPayloadContent}/>
+            </aside>
+            <main class="c-output">
+              <CodeSection title="Pattern" 
+                onChange={this.handlePatternCodeChange} 
+                content={this.state.initialPatternContent}/>
 
-            <CodeSection title="Output" readOnly={true} content={this.state.matchOutput} />
-          </main>
+              <CodeSection title="Output" readOnly={true} content={this.state.matchOutput} />
+            </main>
+          </div>
         </div>
       </div>
     );
