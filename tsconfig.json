@@ -12,10 +12,14 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": true
   },
   "include": [
     "src/*.ts",
     "src/*.tsx", "src/components/Header/header.tsx", "src/components/Main/main.tsx"
+  ],
+  "types": [
+    "typePatches"
   ]
 }

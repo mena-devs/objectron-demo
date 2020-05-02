@@ -7,10 +7,25 @@ header {
   grid-gap: 1rem;
   color: #fff;
   background: #3863D9;
-  padding: 1rem;
+  margin: 0;
+  padding:10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 header h1 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.fork-btn {
+  display: flex;
+  align-items: center;
+}
+
+.fork-btn a {
+  color: #FFF;
+  padding:5px;
+  text-decoration: none;
 }

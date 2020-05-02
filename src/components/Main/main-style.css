@@ -33,11 +33,16 @@ body {
   line-height: 1;
 }
 
-.wrapper {
+.main-wrapper {
+  display: grid;
+  grid-template-rows: fit-content(10%) fit-content(90%);
+  flex-grow: 1;
+}
+
+.panels-wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
   flex-grow: 1;
-  height: 92vh;
 }
 
 .c-input {
@@ -54,4 +59,11 @@ body {
   color: #FFF;
   display: grid;
   grid-template-rows: 50% 50%;
+}
+
+.toolbar {
+  color: #fff;
+  background-color: #616772;
+  box-sizing: border-box;
+  padding: 10px;
 }
