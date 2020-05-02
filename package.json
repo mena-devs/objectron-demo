@@ -13,8 +13,7 @@
   "dependencies": {
     "@menadevs/objectron": "^0.1.4",
     "codemirror": "^5.53.2",
-    "preact": "^10.4.0",
-    "preact-codemirror": "^1.0.1"
+    "preact": "^10.4.0"
   },
   "devDependencies": {
     "css-loader": "^3.5.3",
