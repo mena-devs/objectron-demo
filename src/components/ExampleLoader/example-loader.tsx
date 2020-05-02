@@ -1,5 +1,5 @@
 import { h, Component, createRef } from 'preact';
-
+import './example-loader.css';
 
 export default class ExampleLoader extends Component {
   examples = [
@@ -14,7 +14,12 @@ export default class ExampleLoader extends Component {
       pattern: `{\n  'type': 'message',\n  'text': /invite (\S+)/,\n}\n`
     },
     {
-      title: 'Simple match with RegEx',
+      title: 'Match with RegEx and named groups',
+      payload: `{\n  'type': 'message',\n  'text': 'invite (Smith) (john@example.com) (CompanyX) (Engineer)',\n}\n`,
+      pattern: `{\n  'type': 'message',\n  'text': /invite \((?<name>\S+)\) \((?<email>\S+)\) \((?<company>\S+)\) \((?<role>\S+)\)/,\n}\n`
+    },
+    {
+      title: 'Match with closures',
       payload: `{\n  'type': 'message',\n  'text': 'text',\n  'int': 1,\n  'bool': true,\n  'float': 1.1,\n  'items': [1, 1, 1, 1],\n}\n`,
       pattern: `{\n  'type': (val) => val === 'message',\n  'text': (val) => val.length == 4,\n  'int': (val) => val + 1 == 2,\n  'bool': (val) => !!!!!!!!val,\n  'float': (val) => val - 1.1 == 0,\n  'items': (val) => val.length == 4,\n}\n`
     }
@@ -37,8 +42,9 @@ export default class ExampleLoader extends Component {
   }
 
   render() {
-    return (<div>
-      Preloaded examples 
+    return (
+    <div class="dropdown-wrapper">
+      <span class="dropdown-title">Preloaded examples</span>
       <select onChange={this.handleExampleSelectChange}>
         {this.examples.map(option =>
           <option value="Simple">{option.title}</option>

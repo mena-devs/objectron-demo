@@ -1,0 +1,9 @@
+
+.dropdown-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-title {
+  margin-right: 10px;
+}
