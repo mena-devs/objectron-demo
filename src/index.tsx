@@ -1,12 +1,19 @@
-import { h, render } from 'preact';
+import { h, render, Component} from 'preact';
 import Main from './components/Main/main';
+import analytics from './analytics'
 
-function App() {
-  return (
-    <div>
-      <Main /> 
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    analytics.page();
+  }
+
+  render() {
+    return (
+      <div>
+        <Main /> 
+      </div>
+    );
+  }
 }
 
 const root = document.querySelector("#root");
