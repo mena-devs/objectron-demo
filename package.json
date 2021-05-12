@@ -14,7 +14,7 @@
     "@analytics/google-analytics": "^0.3.1",
     "@menadevs/objectron": "^0.1.10",
     "analytics": "^0.3.5",
-    "codemirror": "^5.53.2",
+    "codemirror": "^5.58.2",
     "preact": "^10.4.0"
   },
   "devDependencies": {
